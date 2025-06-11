@@ -31,7 +31,6 @@ const Feed = () => {
       {/* Header */}
       <div className="feed__header">
         <h2>Home</h2>
-        {/* <h2>About</h2> */}
       </div>
 
       {/* TweetBox */}

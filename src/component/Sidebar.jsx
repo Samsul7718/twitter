@@ -20,7 +20,6 @@ const Sidebar = () => {
       <XIcon className="sidebar__twitterIcon" />
 
       <SidebarOption active Icon={HomeIcon} text="Home" />
-      {/* <SidebarOption active Icon={AdbOutlined} text="About"/> */}
       <SidebarOption Icon={SearchIcon} text="Explore" />
       <SidebarOption Icon={NotificationsIcon} text="Notification" />
       <SidebarOption Icon={MessageIcon} text="Messages" />
@@ -41,9 +40,7 @@ const Sidebar = () => {
       <Button variant="outlined" className="sidebar__tweet" fullWidth>
         tweet
       </Button>
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Share
-      </Button>
+     
     </div>
   );
 };
