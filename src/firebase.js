@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; // Import Firestore
 
 const firebaseConfig = {
-  apiKey: " ",
+  apiKey: "",
   authDomain: "twitter-app-8b4bc.firebaseapp.com",
   projectId: "twitter-app-8b4bc",
   storageBucket: "twitter-app-8b4bc.appspot.com",
