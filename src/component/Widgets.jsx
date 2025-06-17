@@ -8,6 +8,10 @@ import {
 } from "react-twitter-embed";
 
 const Widgets = () => {
+//   setTimeout(() => {
+//   twitter.widgets.load();
+// }, 3000); // wait 3 seconds
+
   return (
     <>
       <div className="widgets">
