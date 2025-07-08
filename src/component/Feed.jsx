@@ -5,7 +5,8 @@ import Post from "./Post";
 // import img from "../assets/whatsapp.jpeg";
 // import { db } from "../firebase";
 import db from "../firebase";
-import FlipMove from "react-flip-move";
+// import FlipMove from "react-flip-move";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 import { collection, onSnapshot } from "firebase/firestore"; 
@@ -39,8 +40,14 @@ const Feed = () => {
       <TweetBox />
 
       {/* Post */}
-      <FlipMove>
+      <AnimatePresence>
          {posts.map(post=>(
+            <motion.div
+      key={post.id}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+    >
         <Post key={post.id}
         displayName={post.displayName}
         username={post.username}
@@ -49,8 +56,9 @@ const Feed = () => {
         avatar={post.avatar}
         image={post.image}
         />
+        </motion.div>
       ))}
-      </FlipMove>
+      </AnimatePresence>
      
       {/* <Post
         displayName="Samsul Alam"
@@ -60,13 +68,13 @@ const Feed = () => {
         avatar={img}
         image={img}
       /> */}
+      {/* <Post />
       <Post />
       <Post />
       <Post />
       <Post />
       <Post />
-      <Post />
-      <Post />
+      <Post /> */}
       {/* Post */}
       {/* Post */}
       {/* Post */}
